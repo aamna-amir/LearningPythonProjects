@@ -1,14 +1,10 @@
-# create a mad lab game!
+# create a mad libs game!
 
 from random import randint
 import copy
 
 story = (
-    "One day my {} friend and I decided to go to the {} game in {}." +
-    "We really wanted to see the {} play the {}. So we {} our {} "+
-    "down to the {} and bought some {}s. We got into the game and "+
-    "It was a lot of fun. We ate some {} {} and drank some {} {}."+
-    "We had a great time! We plan to go again next year!"
+    "One day my {} friend and I decided to go to the {} game in {}. We really wanted to see the {} play the {}. So we {} our {} down to the {} and bought some {}s. We got into the game and It was a lot of fun. We ate some {} {} and drank some {} {}. We had a great time! We plan to go again next year!"
 )
 
 word_dict = {
@@ -47,3 +43,5 @@ def create_story():
     )
 
 story1 = create_story()
+
+print(story1)
