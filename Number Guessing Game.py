@@ -14,13 +14,7 @@ num = randint(1, 100)
 
 print(num)
 def comp_guess_num(input_num, guess):
-    score = 100
-    if input_num > guess:
-        print(f"OPPS.. TRY AGAIN\nHint! Guess number is less than {guess + randint(1,10)}..")
-        score -= 1
-    else: 
-        print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater {randint(90,100) - guess}..")
-        score -= 1
+    pass
 
 def diff_guess_num(input_num, guess):
     diff = input_num - guess
@@ -30,12 +24,23 @@ def check_actual_num():
     pass
 
 def guess_num(guess):
-    
+    score = 100
     flag = True
     while flag:
         user_num = int(input("Guess the number: "))
         if user_num != guess:
-            comp_guess_num(user_num, guess)
+            if user_num > guess:
+                print(f"OPPS.. TRY AGAIN\nHint! Guess number is less than {guess + randint(1,10)}..")
+                score -= 1
+            elif guess % 2 == 0 and user_num % 2 != 0:
+                print(f"OPPS.. TRY AGAIN\nHint! Guess number is Even number..")
+                score -= 1
+            elif guess % 2 != 0 and user_num % 2 == 0:
+                print(f"OPPS.. TRY AGAIN\nHint! Guess number is Odd number..")
+                score -= 1
+            else: 
+                print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater number {randint(90,100) - guess}..")
+                score -= 1
         else:
             print(f"Congratulations! You won the game...\nYour Score: {score}")
             flag = False
