@@ -11,17 +11,20 @@
 from random import randint
 
 num = randint(1, 100)
+
 print(num)
 def guess_num(guess):
-    
+    score = 100
     flag = True
     while flag:
         user_num = int(input("Guess the number: "))
         if user_num != guess:
             if user_num > guess:
                 print(f"OPPS.. TRY AGAIN\nHint! Guess number is less than {guess + randint(1,10)}..")
+                score -= 1
             else: 
                 print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater {randint(100,110) - guess}..")
+                score -= 1
         else:
             print("Congratulations! You won the game...")
             flag = False
