@@ -8,11 +8,11 @@ story = (
 )
 
 word_dict = {
-    'adjective': ['greedy','abrasive','grubby','groovy','rich','harsh','tasty','slow'],
-    'city name': ['Chicago','New York','Charlotte','Indianapolis','Louisville','denver'],
+    'adjective': ['greedy','dump','chubby','groovy','rich','harsh','tasty','slow'],
+    'city name': ['Gujranwala','Lahore','Karachi','Islamabad','Multan','Sialkot'],
     'noun': ['people','map','music','dog','hamster','ball','hotdog','salad'],
-    'action verb': ['run','fall','crawl','scurry','cray','watch','swim','jump','bounce'],
-    'sports noun': ['ball','mit','puck','uniform','helmet','scoreboard','player']
+    'action verb': ['run','fall','crawl','beat','cray','watch','swim','jump','bounce'],
+    'sports noun': ['ball','bat','dice','uniform','helmet','scoreboard','player']
 }
 
 def get_word(type, local_dict):
