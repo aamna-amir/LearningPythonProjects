@@ -26,7 +26,7 @@ def guess_num(guess):
                 print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater {randint(100,110) - guess}..")
                 score -= 1
         else:
-            print("Congratulations! You won the game...")
+            print(f"Congratulations! You won the game...\nYour Score: {score}")
             flag = False
 
 guess_num(num)
