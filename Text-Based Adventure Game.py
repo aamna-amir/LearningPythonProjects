@@ -7,7 +7,7 @@
 # Mentioning Python projects can help your resume look much more interesting than others.
 
 rooms = {
-    1: {'Master Bed Room': ['wall1','wall2']},
+    1: {'Master Bed Room': ['wall1','wall2','wall3','wall4'],
     2: 'Bed Room',
     3: 'Dinning Room',
     4: 'Drawing Room',
