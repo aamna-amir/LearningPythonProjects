@@ -24,10 +24,6 @@ def diff_guess_num(input_num, guess):
 def check_actual_num():
     pass
 
-# def guess_num(guess):
-#     score = 100
-#     flag = True
-
 user_num = None
 score = 100
 while user_num != secret:
@@ -48,5 +44,3 @@ while user_num != secret:
     else:
         print(f"Congratulations! You won the game...\nYour Score: {score}")
         flag = False
-
-guess_num(num)
