@@ -24,26 +24,29 @@ def diff_guess_num(input_num, guess):
 def check_actual_num():
     pass
 
-def guess_num(guess):
-    score = 100
-    flag = True
-    while flag:
-        user_num = int(input("Guess the number: "))
-        if user_num != guess:
-            if user_num > guess:
-                print(f"OPPS.. TRY AGAIN\nHint! Guess number is less than {guess + randint(1,10)}..")
-                score -= 1
-            elif guess % 2 == 0 and user_num % 2 != 0:
-                print(f"OPPS.. TRY AGAIN\nHint! Guess number is Even number..")
-                score -= 1
-            elif guess % 2 != 0 and user_num % 2 == 0:
-                print(f"OPPS.. TRY AGAIN\nHint! Guess number is Odd number..")
-                score -= 1
-            else: 
-                print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater number {guess}..")
-                score -= 1
-        else:
-            print(f"Congratulations! You won the game...\nYour Score: {score}")
-            flag = False
+# def guess_num(guess):
+#     score = 100
+#     flag = True
+
+user_num = None
+score = 100
+while user_num != secret:
+    user_num = int(input("Guess the number: "))
+    if user_num != secret:
+        if user_num > secret:
+            print(f"OPPS.. TRY AGAIN\nHint! Guess number is less than {secret + randint(1,10)}..")
+            score -= 1
+        elif secret % 2 == 0 and user_num % 2 != 0:
+            print(f"OPPS.. TRY AGAIN\nHint! Guess number is Even number..")
+            score -= 1
+        elif secret % 2 != 0 and user_num % 2 == 0:
+            print(f"OPPS.. TRY AGAIN\nHint! Guess number is Odd number..")
+            score -= 1
+        else: 
+            print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater number {user_num}..")
+            score -= 1
+    else:
+        print(f"Congratulations! You won the game...\nYour Score: {score}")
+        flag = False
 
 guess_num(num)
