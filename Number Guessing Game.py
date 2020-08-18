@@ -10,9 +10,10 @@
 
 from random import randint
 
-num = randint(1, 100)
+secret = randint(1, 100)
 
-print(num)
+print(secret)
+
 def comp_guess_num(input_num, guess):
     pass
 
@@ -39,7 +40,7 @@ def guess_num(guess):
                 print(f"OPPS.. TRY AGAIN\nHint! Guess number is Odd number..")
                 score -= 1
             else: 
-                print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater number {randint(90,100) - guess}..")
+                print(f"OPPS.. TRY AGAIN\nHint! Guess number is greater number {guess}..")
                 score -= 1
         else:
             print(f"Congratulations! You won the game...\nYour Score: {score}")
