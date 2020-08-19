@@ -10,13 +10,14 @@
 while True:
     visit = input("\nWhich room you want to visit? master for Mater Bed Room | bedroom for Bed Room: ")
     if visit == 'master':
-        visit = input("\nWelcome to master bed room! \nWhere you want to go next? right for bedroom | left for dinning room")
+        visit = input("\nWelcome to master bed room! \nWhere you want to go next? right for bedroom | left for dinning room: ")
         if visit == 'right':
             visit = input("\nWelcome to bedroom! \nThere is a study room in front of this bedroom. \nWould you like to visit the study room? yes | no: ")
             if visit == 'yes':
                 visit = input("\nWelcome to study room!\nWould you like to stay here to read books or visit the Drawing room that is on the right side of this room? stay|visit: ")
                 if visit == 'visit':
                     print("\nTake rest in drawing room...\nSee you soon... Take Care")
+                    break
                 else:
                     print("\nEnjoy Reading...\nTake Care")
                     break
@@ -24,7 +25,7 @@ while True:
                 print("\nOK! Take rest in bedroom...\nTake Care")
                 break
         elif visit == 'left':
-            print("\nWelcome in Dinning area! \n Enjoy your meal...\nTake Care")
+            print("\nWelcome in Dinning area!\nEnjoy your meal...\nTake Care")
             break
         else: 
             print("\nInvalid direction: ")
