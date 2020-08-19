@@ -16,3 +16,22 @@ rooms = {
 }
 
 visit = None
+visit = input("Which room you want to visit? Mater Bed Room | Bed Room: ")
+if visit == 'master':
+    visit = input("Welcome to master bed room! \nWhere you want to go next? right for bedroom | left for dinning room")
+    if visit == 'right':
+        visit = input("Welcome to bedroom! \nThere is a study room in front of this bedroom. \nWant you to visit the study room? yes | no: ")
+        if visit == 'yes':
+            visit = input("Welcome to study room!\nWant to stay here to read books or visit the Drawing room that is on the right side of this room? stay|visit: ")
+            if visit == 'visit':
+                print("Take rest in drawing room...\nSee you soon... Take Care")
+            else:
+                print("Enjoy Reading...\nTake Care")
+        else:
+            print("OK! Take rest in bedroom...\nTake Care")
+    elif visit == 'left':
+        print("Welcome in Dinning area! \n Enjoy your meal...\nTake Care")
+    else: 
+        print("Invalid direction: ")
+else: 
+
