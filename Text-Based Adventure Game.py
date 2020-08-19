@@ -8,25 +8,25 @@
 
 
 
-visit = input("Which room you want to visit? master for Mater Bed Room | bedroom for Bed Room: ")
+visit = input("\nWhich room you want to visit? master for Mater Bed Room | bedroom for Bed Room: ")
 if visit == 'master':
-    visit = input("Welcome to master bed room! \nWhere you want to go next? right for bedroom | left for dinning room")
+    visit = input("\nWelcome to master bed room! \nWhere you want to go next? right for bedroom | left for dinning room")
     if visit == 'right':
-        visit = input("Welcome to bedroom! \nThere is a study room in front of this bedroom. \nWould you like to visit the study room? yes | no: ")
+        visit = input("\nWelcome to bedroom! \nThere is a study room in front of this bedroom. \nWould you like to visit the study room? yes | no: ")
         if visit == 'yes':
-            visit = input("Welcome to study room!\nWould you like to stay here to read books or visit the Drawing room that is on the right side of this room? stay|visit: ")
+            visit = input("\nWelcome to study room!\nWould you like to stay here to read books or visit the Drawing room that is on the right side of this room? stay|visit: ")
             if visit == 'visit':
-                print("Take rest in drawing room...\nSee you soon... Take Care")
+                print("\nTake rest in drawing room...\nSee you soon... Take Care")
             else:
-                print("Enjoy Reading...\nTake Care")
+                print("\nEnjoy Reading...\nTake Care")
         else:
-            print("OK! Take rest in bedroom...\nTake Care")
+            print("\nOK! Take rest in bedroom...\nTake Care")
     elif visit == 'left':
-        print("Welcome in Dinning area! \n Enjoy your meal...\nTake Care")
+        print("\nWelcome in Dinning area! \n Enjoy your meal...\nTake Care")
     else: 
-        print("Invalid direction: ")
+        print("\nInvalid direction: ")
 
 elif visit == 'bedroom':
-    print("Welcome to Bedroom!Take Rest")
+    print("\nWelcome to Bedroom!Take Rest")
 else: 
-    print("GameOver!")
+    print("\nGameOver!")
