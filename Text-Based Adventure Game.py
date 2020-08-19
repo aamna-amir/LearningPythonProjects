@@ -6,17 +6,9 @@
 # set movement restrictions, and also include a tracker that can track how far a user has walked or moved in the game. 
 # Mentioning Python projects can help your resume look much more interesting than others.
 
-rooms = {
-    1: {'Master Bed Room': ['wall1','wall2','wall3','wall4'],
-    2: 'Bed Room',
-    3: 'Dinning Room',
-    4: 'Drawing Room',
-    5: 'Living Room',
-    6: 'Study Room'
-}
 
-visit = None
-visit = input("Which room you want to visit? Mater Bed Room | Bed Room: ")
+
+visit = input("Which room you want to visit? master for Mater Bed Room | bedroom for Bed Room: ")
 if visit == 'master':
     visit = input("Welcome to master bed room! \nWhere you want to go next? right for bedroom | left for dinning room")
     if visit == 'right':
@@ -34,4 +26,4 @@ if visit == 'master':
     else: 
         print("Invalid direction: ")
 else: 
-
+    print("GameOver!")
