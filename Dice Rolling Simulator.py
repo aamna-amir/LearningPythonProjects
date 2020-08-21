@@ -7,3 +7,16 @@
 # It will also ask users if they would like to roll the dice again. 
 # The program should also include a function that can randomly grab a number within 1 to 6 and print it. 
 # This beginner-level project will help build a strong foundation for fundamental programming concepts.
+
+from random import randint
+
+def dice_rolls():
+    dice_no = randint(1,6)
+    print(dice_no)
+
+user = input("Enter roll for rolling dice: ").lower()
+if user == 'roll':
+    dice_rolls()
+else:
+    print("Game Over!")
+
