@@ -12,13 +12,25 @@ from random import choice
 words = ['apple','computer','chair','book','unicorn']
 hidden_word = choice(words)
 count = 0
-limit = 3
+limit = 0
 print(hidden_word)
 
 def check_letter(letter):
     for word in words:
-        if letter in word:
-            print("found", word)
+        if letter in word and len(letter)==1:
+            print("\nYou Won!\nword found: ", word)
             break
+    else:
+        print("\nTry Again")
 
-check_letter('p')
+flag = True
+while flag:
+    if limit < 3:
+        limit += 1
+        user_input = input("\nEnter a letter: ")
+        check_letter(user_input)
+        count += 1
+    else:
+        print("\nGame Over!")
+        flag = False
+print("\nTries: ", count)
