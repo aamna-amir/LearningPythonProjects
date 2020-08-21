@@ -7,3 +7,8 @@
 # Also, you must include specific functions to check whether or not a user has entered a single letter or 
 # if the input letter is in the hidden word, to if the user has actually inputted a single letter, 
 # and to print the correct outcomes (letters).
+
+from random import random
+letters = ['a','e','i','o','u']
+secret_letter = letters
+print(secret_letter)
