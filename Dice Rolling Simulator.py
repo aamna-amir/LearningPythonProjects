@@ -14,9 +14,13 @@ def dice_rolls():
     dice_no = randint(1,6)
     print(dice_no)
 
-user = input("Enter roll for rolling dice: ").lower()
-if user == 'roll':
-    dice_rolls()
-else:
-    print("Game Over!")
+while True:
+    user = input("Rolling Dice! roll | quit : ").lower()
+    if user == 'roll':
+        dice_rolls()
+        user = ("Wanna roll again? yes | no : ")
+        if user == 'no':
+            print("Game Over!\nThank you for playing.")
+    else:
+        print("Game Over!\nThank You for playing.")
 
