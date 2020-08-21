@@ -14,3 +14,11 @@ hidden_word = choice(words)
 count = 0
 limit = 3
 print(hidden_word)
+
+def check_letter(letter):
+    for word in words:
+        if letter in word:
+            print("found", word)
+            break
+
+check_letter('p')
