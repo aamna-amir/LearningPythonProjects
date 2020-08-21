@@ -19,6 +19,7 @@ def check_letter(letter):
     for word in words:
         if letter in word and len(letter)==1:
             print("\nYou Won!\nword found: ", word)
+            return 'found'
             break
     else:
         print("\nTry Again")
@@ -26,10 +27,12 @@ def check_letter(letter):
 flag = True
 while flag:
     if limit < 3:
+        count += 1
         limit += 1
         user_input = input("\nEnter a letter: ")
-        check_letter(user_input)
-        count += 1
+        if check_letter(user_input) == 'found':
+            print("\nGame Over!")
+            break
     else:
         print("\nGame Over!")
         flag = False
