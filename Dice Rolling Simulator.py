@@ -22,5 +22,7 @@ while True:
         if user == 'no':
             print("\nGame Over!\nThank you for playing.")
             break
-
+    else:
+         print("\nInvalid Input\nGame Over!\nThank You for playing.")
+         break
 print("\nEnd")
