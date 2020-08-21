@@ -15,12 +15,12 @@ def dice_rolls():
     print(dice_no)
 
 while True:
-    user = input("Rolling Dice! roll | quit : ").lower()
+    user = input("\nRolling Dice! roll | quit : ").lower()
     if user == 'roll':
         dice_rolls()
-        user = ("Wanna roll again? yes | no : ")
+        user = input("\nWanna play again? yes | no : ")
         if user == 'no':
-            print("Game Over!\nThank you for playing.")
-    else:
-        print("Game Over!\nThank You for playing.")
+            print("\nGame Over!\nThank you for playing.")
+            break
 
+print("\nEnd")
