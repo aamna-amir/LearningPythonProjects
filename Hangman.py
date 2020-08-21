@@ -9,6 +9,8 @@
 # and to print the correct outcomes (letters).
 
 from random import choice
-letters = ['a','e','i','o','u']
-secret_letter = choice(letters)
-print(secret_letter)
+words = ['apple','computer','chair','book','unicorn']
+hidden_word = choice(words)
+count = 0
+limit = 3
+print(hidden_word)
