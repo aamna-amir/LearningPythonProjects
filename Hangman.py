@@ -15,12 +15,10 @@ count = 0
 limit = 0
 print(hidden_word)
 
-def check_letter(letter):
-    for word in words:
-        if letter in word and len(letter)==1:
-            print("\nYou Won!\nword found: ", word)
-            return 'found'
-            break
+def check_letter(letter, word):
+    if letter in word and len(letter)==1:
+        print("\nYou Won!\nword found: ", word)
+        return 'found'
     else:
         print("\nTry Again")
 
@@ -30,7 +28,7 @@ while flag:
         count += 1
         limit += 1
         user_input = input("\nEnter a letter: ")
-        if check_letter(user_input) == 'found':
+        if check_letter(user_input, hidden_word) == 'found':
             print("\nGame Over!")
             break
     else:
