@@ -23,6 +23,5 @@ while True:
             print("\nGame Over!\nThank you for playing.")
             break
     else:
-         print("\nInvalid Input\nGame Over!\nThank You for playing.")
+         print("\nGame Over!\nThank You for playing.")
          break
-print("\nEnd")
