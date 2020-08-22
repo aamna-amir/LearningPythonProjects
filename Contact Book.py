@@ -5,7 +5,7 @@
 # The application should also allow users to update contact information, delete contacts, and list saved contacts. 
 # The SQLite database is the ideal platform for saving contacts.
 
-print("\nContact Book\n")
+print("\n-------------------Contact Book-------------------\n")
 
 contact_list = []
 class Contact:
@@ -16,28 +16,29 @@ class Contact:
         self.email = email
 
     def add_contact(self):
-        print("\nAdd New Contact")
-        name = input("\nName: \t\t")
+        print("\n-------------------Add New Contact-------------------")
+        name = input("\nFull Name\t: \t")
         self.name = name
-        address = input("Address: \t")
+        address = input("Address\t\t: \t")
         self.address = address
-        phone = input("Phone No.: \t")
+        phone = input("Phone No.\t: \t")
         self.phone = phone
-        email = input("Email: \t\t")
+        email = input("Email Address\t: \t")
         self.email = email
-        contact_dict = {'Name': self.name, 'Address': self.address, 'Phone No': self.phone, 'Email': self.email}
+        contact_dict = {'Full Name': self.name, 'Address': self.address, 'Phone No': self.phone, 'Email Address': self.email}
         contact_list.append(contact_dict)
 
     def display(self):
-        print("\nContact Details\n")
-        print("Name: \t\t", self.name)
-        print("Address: \t", self.address)
-        print("Phone: \t\t", self.phone)
-        print("Email: \t\t", self.email)
+        print("\n-------------------Contact Details-------------------\n")
+        i = 0
+        for contact in contact_list:
+            i += 1
+            print('Contact ', i,"\n")
+            for key, value in contact.items():
+                print(key, " \t:\t", value)
 
 c1 = Contact('','','','')
 c1.display()
 c1.add_contact()
-c1.add_contact()
-print(contact_list)
+print("\n",contact_list)
 c1.display()
