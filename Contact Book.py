@@ -35,15 +35,27 @@ class Contact:
             for key, value in contact.items():
                 print(key, " \t:\t", value)
 
+    def search_contact(self):
+        search = input("Enter Name: ")
+        for contact in contact_list:
+            if contact['Full Name'] == search:
+                for key, value in contact.items():
+                    print(key, " \t:\t", value)
+
+    def update_contact(self):
+        pass
+
+    
+
 print("\n-------------------Contact Book-------------------\n")
 c1 = Contact('','','','')
-user = int(input("\n1. Add Contact\n2. Contact Details\n3. Update Contact\n\nEnter Option No. : "))
+user = int(input("\n1. Add Contact\n2. Contact Details\n3. Search Contact\n4. Update Contact\n5. Delete Contact\n\nEnter Option No. : "))
 if user == 1:
     c1.add_contact()
 elif user == 2:
     c1.display()
 elif user == 3:
-    pass
+    c1.search_contact()
 else:
     print("\nInvalid Input")
 # print("\n",contact_list)
