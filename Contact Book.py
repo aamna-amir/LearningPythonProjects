@@ -14,4 +14,9 @@ class Contact:
         self.phone = phone
         self.email = email
 
-    
+    def display(self):
+        print("\nContact Details\n")
+        print("Name: ", self.name)
+        print("Address: ", self.address)
+        print("Phone: ", self.phone)
+        print("Email: ", self.email)
