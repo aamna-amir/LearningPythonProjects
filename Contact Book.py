@@ -5,8 +5,6 @@
 # The application should also allow users to update contact information, delete contacts, and list saved contacts. 
 # The SQLite database is the ideal platform for saving contacts.
 
-print("\n-------------------Contact Book-------------------\n")
-
 contact_list = []
 class Contact:
     def __init__(self, name, address, phone, email):
@@ -37,8 +35,15 @@ class Contact:
             for key, value in contact.items():
                 print(key, " \t:\t", value)
 
+print("\n-------------------Contact Book-------------------\n")
 c1 = Contact('','','','')
-c1.display()
-c1.add_contact()
-print("\n",contact_list)
-c1.display()
+user = int(input("\n1. Add Contact\n2. Contact Details\n3. Update Contact\n\nEnter Option No. : "))
+if user == 1:
+    c1.add_contact()
+elif user == 2:
+    c1.display()
+elif user == 3:
+    pass
+else:
+    print("\nInvalid Input")
+# print("\n",contact_list)
