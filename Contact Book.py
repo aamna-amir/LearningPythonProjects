@@ -6,3 +6,12 @@
 # The SQLite database is the ideal platform for saving contacts.
 
 print("\nContact Book\n")
+
+class Contact:
+    def __init__(self, name, address, phone, email):
+        self.name = name
+        self.address = address
+        self.phone = phone
+        self.email = email
+
+    
