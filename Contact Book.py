@@ -49,13 +49,16 @@ class Contact:
 
 print("\n-------------------Contact Book-------------------\n")
 c1 = Contact('','','','')
-user = int(input("\n1. Add Contact\n2. Contact Details\n3. Search Contact\n4. Update Contact\n5. Delete Contact\n\nEnter Option No. : "))
-if user == 1:
-    c1.add_contact()
-elif user == 2:
-    c1.display()
-elif user == 3:
-    c1.search_contact()
-else:
-    print("\nInvalid Input")
+
+while True:
+    user = int(input("\n1. Add Contact\n2. Contact Details\n3. Search Contact\n4. Update Contact\n5. Delete Contact\n6. Exit\n\nEnter Option No. : "))
+    if user == 1:
+        c1.add_contact()
+    elif user == 2:
+        c1.display()
+    elif user == 3:
+        c1.search_contact()
+    else:
+        print("\n-------------------Saved-------------------\n")
+        break
 # print("\n",contact_list)
