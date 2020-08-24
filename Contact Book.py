@@ -25,6 +25,7 @@ class Contact:
         self.email = email
         contact_dict = {'Full Name': self.name, 'Address': self.address, 'Phone No': self.phone, 'Email Address': self.email}
         contact_list.append(contact_dict)
+        print("\n-------------------Contact Saved-------------------\n")
 
     def display(self):
         print("\n-------------------Contact Details-------------------\n")
@@ -52,7 +53,15 @@ class Contact:
                 contact['Address'] = input("Address\t\t: \t")
                 contact['Phone No'] = input("Phone No.\t: \t")
                 contact['Email Address'] = input("Email Address\t: \t")
-    
+                print("\n-------------------Contact Updated-------------------\n")
+
+    def delete_contact(self):
+        print("\n-------------------Delete Contact-------------------\n")
+        search = input("Enter Name: ")
+        for contact in contact_list:
+            if contact['Full Name'] == search:
+                contact_list.remove(contact)
+                print("\n-------------------Contact Deleted-------------------\n")
 
 c1 = Contact('','','','')
 
@@ -68,6 +77,8 @@ while True:
         c1.search_contact()
     elif user == 4:
         c1.update_contact()
+    elif user == 5:
+        c1.delete_contact()
     else:
         print("\n-------------------Saved-------------------\n")
         break
