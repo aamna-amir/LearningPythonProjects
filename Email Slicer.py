@@ -3,8 +3,10 @@
 # The program helps get you the username and domain name from an email address. 
 # You can even customize the application and send a message to the host with this information.
 
-def get_username():
-    pass
+email = input("Enter your email address: ")
 
-def get_domain():
-    pass
+user_name = email[:email.index("@")]
+
+domain = email[email.index("@")+1:]
+
+print(f"Your user name is {user_name} and domain is {domain}")
