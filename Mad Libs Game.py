@@ -1,4 +1,4 @@
-# create a mad libs game!
+# 1. Mad Libs Game!
 
 from random import randint
 import copy
