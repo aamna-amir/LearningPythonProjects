@@ -9,10 +9,10 @@
 # user or until the subarray size becomes 0 (this means that the number is not in the list). 
 # This python project idea will help you create an implement an algorithm that searches for an element in a list. 
 
-from random import randint
-
 numbers = []
 for i in range(1, 100, 2):
     numbers.append(i)
 
 print(numbers)
+
+user = int(input("Enter a number for searching: "))
