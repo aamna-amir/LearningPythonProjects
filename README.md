@@ -9,7 +9,7 @@
 - [x] Dice Rolling Simulator
 - [x] Hangman
 - [x] Contact Book
-- [ ] Email Slicer
-- [ ] Binary search algorithm
+- [x] Email Slicer
+- [x] Binary search algorithm
 - [ ] Desktop Notifier App
 - [ ] Python Story Generator
