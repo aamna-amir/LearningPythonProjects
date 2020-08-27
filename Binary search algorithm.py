@@ -16,3 +16,6 @@ for i in range(1, 100, 2):
 print(numbers)
 
 user = int(input("Enter a number for searching: "))
+
+if user in numbers:
+    print("Number Found.")
