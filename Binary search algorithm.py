@@ -9,20 +9,24 @@
 # user or until the subarray size becomes 0 (this means that the number is not in the list). 
 # This python project idea will help you create an implement an algorithm that searches for an element in a list. 
 
-numbers = []
-for i in range(1, 100, 2):
-    numbers.append(i)
+numbers = [i for i in range(1, 100, 2)]
 
 print(numbers)
+user = 45
 
-user = int(input("Enter a number for searching: "))
-mid = len(numbers)//2
-print("Length of list: ", len(numbers))
-print("Mid Value: ", numbers[mid])
-print("Mid Index: ", mid)
-if user <= numbers[mid]:
-    print("Number Found in 1st half list.")
-elif user > numbers[mid]:
-    print("Number Found in 2nd half list.")
-else:
-    print("Number Not Found in list.")
+def BinarySearch(lists, num):
+    flag = False
+    high = len(lists)-1
+    low = 0
+    while low < high and not flag:
+        mid = (low + high)//2
+        if lists[mid] == num:
+            flag = True 
+        else:
+            if num < lists[mid]:
+                high = mid - 1
+            else:
+                low = mid + 1
+    return lists[mid], mid
+
+print(BinarySearch(numbers, user))
