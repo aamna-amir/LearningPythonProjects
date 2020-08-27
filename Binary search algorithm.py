@@ -16,6 +16,13 @@ for i in range(1, 100, 2):
 print(numbers)
 
 user = int(input("Enter a number for searching: "))
-
-if user in numbers:
-    print("Number Found.")
+mid = len(numbers)//2
+print("Length of list: ", len(numbers))
+print("Mid Value: ", numbers[mid])
+print("Mid Index: ", mid)
+if user <= numbers[mid]:
+    print("Number Found in 1st half list.")
+elif user > numbers[mid]:
+    print("Number Found in 2nd half list.")
+else:
+    print("Number Not Found in list.")
