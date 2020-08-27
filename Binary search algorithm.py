@@ -29,4 +29,4 @@ def BinarySearch(lists, num):
                 low = mid + 1
     return lists[mid], mid
 
-print(BinarySearch(numbers, user))
+print("Search Number: ", BinarySearch(numbers, user)[0], "\nNumber Position: ", BinarySearch(numbers, user)[1])
